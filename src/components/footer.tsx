@@ -19,27 +19,26 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <div ref={textRef} className="w-5 h-5 rounded-full bg-white"></div>
             <p ref={textRef} className="text-[1.5rem] font-poppins leading-tight max-1200:text-[1.2rem] max-700:text-[1rem]">
-              Ready to elevate your brand?
+              ¿Listo para elevar tu marca?
             </p>
           </div>
           <p ref={textRef} className="text-[1.5rem] text-[#777] leading-tight max-1200:text-[1.2rem] max-700:text-[1rem]">
-            Drop a message, and let’s start building something amazing
-            together.
+            Deja un mensaje y comencemos a construir algo increíble juntos
           </p>
         </div>
         <div className="w-full flex flex-col items-end justify-center">
           <p ref={textRef} className="font-unbounded text-[5.5rem] leading-none max-1100:text-[4.5rem] max-700:text-[3.5rem] max-600:text-[3rem] max-500:text-[2.4rem] max-400:text-[2rem]">
-            LETS BRING
+            CONVIRTAMOS
           </p>
           <p ref={textRef} className="font-unbounded text-[5.5rem] leading-none max-1100:text-[4.5rem] max-700:text-[3.5rem] max-600:text-[3rem] max-500:text-[2.4rem] max-400:text-[2rem]">
-            YOUR IDEAS
+            TUS IDEAS
           </p>
           <div ref={textRef} className="flex min-w-[45%]">
             <Link href={"https://api.whatsapp.com/send?phone=5493484337681"} className="group w-full p-1 transition-all ease-in-out duration-1000 mr-3">
               <div className="bg-[#262626] p-1 rounded-[0.2rem] rounded-br-[1.2rem] border border-[#0f0f0f]">
                 <div className="relative w-full flex justify-between">
                   <div className="w-full px-5 flex items-center justify-center text-[1.2rem] max-700:px-3 max-500:px-1">
-                    <p className="z-10 text-[1rem] max-700:text-[0.9rem] w-full">Get in touch</p>
+                    <p className="z-10 text-[1rem] max-700:text-[0.9rem] w-full">Contáctame</p>
                     <div className="absolute left-0 w-0 h-full bg-none rounded-[0.2rem] rounded-br-[1.2rem] border border-[#262626] group-hover:w-[100%] group-hover:bg-[#ea3c06] transition-all ease-in-out duration-500"></div>
                   </div>
                   <div className="flex items-center justify-center bg-[#505050] px-6 py-5 rounded-[0.2rem] rounded-br-[1.2rem] group-hover:bg-[#262626]  transition-all ease-in-out duration-200 max-1100:py-3 max-700:py-1 max-700:px-2">
@@ -49,7 +48,7 @@ export default function Footer() {
               </div>
             </Link>
             <p ref={textRef} className="w-full font-unbounded text-[5.5rem] leading-none text-nowrap max-1100:text-[4.5rem] max-700:text-[3.5rem] max-600:text-[3rem] max-500:text-[2.4rem] max-400:text-[2rem]">
-              TO LIFE
+              A VIDA
             </p>
           </div>
         </div>
@@ -130,7 +129,7 @@ export default function Footer() {
           {/* acá voy a poner los bordes esos */}
           <div className="w-[25%] pt-20 pb-3 border border-[#262626] max-1300:w-[30%] max-700:w-[40%] max-500:w-[50%]">
             <div className="flex items-center justify-end gap-3 p-3 max-1100:flex-col-reverse">
-              <p className="font-unbounded text-center">BACK TO TOP</p>
+              <p className="font-unbounded text-center">VOLVER A INICIO</p>
               <Link href={"#home"} className="group relative border border-[#262626] rounded-full overflow-hidden">
                 <div className="absolute bottom-0 w-full h-0 bg-[#ea3b060c] -z-10  transition-all duration-300 ease-in-out group-hover:bg-[#ea3c06] group-hover:h-full "></div>
                 <IoArrowUp className="m-4" />

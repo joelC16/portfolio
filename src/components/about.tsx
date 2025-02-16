@@ -41,20 +41,20 @@ export default function About() {
                     </div>
                     <div className="flex items-center justify-between w-full">
                         <p className="w-[25%] font-[100]">002</p>
-                        <p className="w-[50%] font-[100]">about</p>
+                        <p className="w-[50%] font-[100]">Sobre mi</p>
                         <p className="w-[25%] text-end font-[100]">©2025</p>
                     </div>
                 </div> {/* acá voy a poner los bordes esos */}
                 <div className="flex items-center w-full justify-between">
-                    <h1 ref={textRef} className="font-unbounded text-[5.5rem] leading-none my-4 max-1100:text-[4.5rem] max-700:text-[3.5rem] max-600:text-[3rem] max-500:text-[2.4rem] max-400:text-[2rem]">ABOUT ME</h1>
+                    <h1 ref={textRef} className="font-unbounded text-[5.5rem] leading-none my-4 max-1100:text-[4.5rem] max-700:text-[3.5rem] max-600:text-[3rem] max-500:text-[2.4rem] max-400:text-[2rem]">SOBRE MI</h1>
                     <p ref={textRef} className="font-unbounded text-[2rem] text-[#878787]">(2)</p>
                 </div> {/* acá va el titulo grande "SELECTED WORKS" */}
             </div>
-            <div className="container-boxes-about relative w-full h-[90vh] max-900:hidden">
+            <div className="container-boxes-about relative w-full h-[90vh] min-h-[900px] max-900:hidden">
                 <div ref={boxRef} className="absolute top-24 left-[15%] w-96 border border-[#262626] rounded-[0.3rem] max-1000:left-[5%] max-1000:top-10">
                     <div className="flex items-center justify-between px-2 py-2 border-b border-[#262626]">
                         <div>
-                            <p>About me</p>
+                            <p>Sobre mi</p>
                         </div>
                         <div className="flex gap-4 items-center">
                             <GoHorizontalRule />
@@ -64,13 +64,13 @@ export default function About() {
 
                     </div>
                     <div className="flex items-center justify-center p-4">
-                        <p>I&apos;m a <span className="text-[#ea3c06]">web developer</span> with a passion for creating intuitive user experiences. Currently studying <span className="text-[#ea3c06]">Systems Analysis</span> at UBA, I have hands-on experience with HTML, CSS, JavaScript, React, and <span className="text-[#ea3c06]">Next.js</span>. I&apos;m driven by challenges and always looking to improve my skills. My goal is to build efficient websites that <span className="text-[#ea3c06]">solve real-world problems</span>.</p>
+                    <p>Soy un <span className="text-[#ea3c06]">desarrollador web</span> enfocado en crear interfaces intuitivas y funcionales. Actualmente estudio <span className="text-[#ea3c06]">Análisis de Sistemas</span> en la <span className="text-[#ea3c06]">UTN</span> y tengo experiencia trabajando con tecnologías como HTML, CSS, JavaScript, React, Node y <span className="text-[#ea3c06]">Next.js</span>. Mi objetivo es construir sitios web que sean eficientes y resuelvan necesidades concretas, siempre priorizando la <span className="text-[#ea3c06]">experiencia del usuario</span>.</p>
                     </div>
                 </div>
                 <div ref={boxRef} className="absolute top-0 left-[60%] w-min border border-[#262626] rounded-[0.3rem] max-1100:left-[70%] max-1000:top-[5%] max-1000:left-[65%]">
                     <div className="flex items-center justify-between gap-16 px-2 py-2 border-b border-[#262626]">
                         <div>
-                            <p>Contact</p>
+                            <p>Contacto</p>
                         </div>
                         <div className="flex gap-4 items-center">
                             <GoHorizontalRule />
@@ -115,7 +115,7 @@ export default function About() {
                 <div ref={boxRef} className="absolute top-[58%] left-0 w-auto border border-[#262626] rounded-[0.3rem] max-1400:top-[50%] max-1000:hidden">
                     <div className="flex items-center justify-between px-2 py-2 border-b border-[#262626]">
                         <div>
-                            <p>T-Chess game - I like playing chess</p>
+                            <p>T-Chess game - Me gusta el ajedrez</p>
                         </div>
                         <div className="flex gap-4 items-center">
                             <GoHorizontalRule />
@@ -131,7 +131,7 @@ export default function About() {
                 <div ref={boxRef} className="absolute top-[45%] left-[80%] w-auto border border-[#262626] rounded-[0.3rem] max-1400:top-[38%] max-1000:left-[65%] max-1000:top-[43%]">
                     <div className="flex items-center justify-between px-2 py-2 border-b border-[#262626]">
                         <div>
-                            <p>Tools</p>
+                            <p>Tecnologias</p>
                         </div>
                         <div className="flex gap-4 items-center">
                             <GoHorizontalRule />
@@ -198,7 +198,7 @@ export default function About() {
                 <div ref={boxRef} className="absolute top-[50%] left-[50%] w-auto border border-[#262626] rounded-[0.3rem] max-1800:left-[45%] max-1300:left-[45%] max-1200:left-[45%] max-1100:left-[48%] max-1000:left-[15%] max-1000:top-[40%]">
                     <div className="flex items-center justify-between px-2 py-2 border-b border-[#262626]">
                         <div>
-                            <p>I love music</p>
+                            <p>Me encanta la música</p>
                         </div>
                         <div className="flex gap-4 items-center">
                             <GoHorizontalRule />
@@ -217,7 +217,7 @@ export default function About() {
                 <div className=" w-96 border border-[#262626] rounded-[0.3rem] max-600:w-full">
                     <div className="flex items-center justify-between px-2 py-2 border-b border-[#262626]">
                         <div>
-                            <p>About me</p>
+                            <p>Sobre mi</p>
                         </div>
                         <div className="flex gap-4 items-center">
                             <GoHorizontalRule />
@@ -227,13 +227,13 @@ export default function About() {
 
                     </div>
                     <div className="flex items-center justify-center p-4">
-                        <p>I&apos;m a <span className="text-[#ea3c06]">web developer</span> with a passion for creating intuitive user experiences. Currently studying <span className="text-[#ea3c06]">Systems Analysis</span> at UBA, I have hands-on experience with HTML, CSS, JavaScript, React, and <span className="text-[#ea3c06]">Next.js</span>. I&apos;m driven by challenges and always looking to improve my skills. My goal is to build efficient websites that <span className="text-[#ea3c06]">solve real-world problems</span>.</p>
+                        <p>Soy un <span className="text-[#ea3c06]">desarrollador web</span> enfocado en crear interfaces intuitivas y funcionales. Actualmente estudio <span className="text-[#ea3c06]">Análisis de Sistemas</span> en la <span className="text-[#ea3c06]">UTN</span> y tengo experiencia trabajando con tecnologías como HTML, CSS, JavaScript, React, Node y <span className="text-[#ea3c06]">Next.js</span>. Mi objetivo es construir sitios web que sean eficientes y resuelvan necesidades concretas, siempre priorizando la <span className="text-[#ea3c06]">experiencia del usuario</span>.</p>
                     </div>
                 </div>
                 <div className=" w-min border border-[#262626] rounded-[0.3rem] max-600:w-full">
                     <div className="flex items-center justify-between gap-16 px-2 py-2 border-b border-[#262626]">
                         <div>
-                            <p>Contact</p>
+                            <p>Contacto</p>
                         </div>
                         <div className="flex gap-4 items-center">
                             <GoHorizontalRule />
@@ -278,7 +278,7 @@ export default function About() {
                 <div className=" w-auto border border-[#262626] rounded-[0.3rem] max-600:w-full">
                     <div className="flex items-center justify-between px-2 py-2 border-b border-[#262626]">
                         <div>
-                            <p>Tools</p>
+                            <p>Tecnologias</p>
                         </div>
                         <div className="flex gap-4 items-center">
                             <GoHorizontalRule />
@@ -344,7 +344,7 @@ export default function About() {
                 <div className="w-auto border border-[#262626] rounded-[0.3rem] top-0 max-600:w-full">
                     <div className="flex items-center justify-between px-2 py-2 border-b border-[#262626]">
                         <div>
-                            <p>I love music</p>
+                            <p>Me encanta la música</p>
                         </div>
                         <div className="flex gap-4 items-center">
                             <GoHorizontalRule />

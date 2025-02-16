@@ -34,16 +34,21 @@ export default function MusicPlayer() {
         { title: "La rubia tarada", artist: "Sumo", duration: "3:43", url: "/audio/laRubiaTarada.mp3", coverArt: "/images/portadaLaRubiaTarada.jpg" }
     ]
 
-    const togglePlay = () => {
-      if (audioRef.current) {
-        if (isPlaying) {
-          audioRef.current.pause();
-        } else {
-          audioRef.current.play();
+    const togglePlay = async () => {
+        if (audioRef.current) {
+            if (isPlaying) {
+                audioRef.current.pause();
+            } else {
+                try {
+                    await audioRef.current.play();
+                } catch (error) {
+                    console.error("Error al reproducir el audio:", error);
+                }
+            }
+            setIsPlaying(!isPlaying);
         }
-        setIsPlaying(!isPlaying);
-      }
     };
+    
 
 
     const restartSong = () => {
@@ -77,13 +82,16 @@ export default function MusicPlayer() {
     }
 
     useEffect(() => {
-        if (audioRef.current && songs.length > 0) {
+        if (audioRef.current) {
             audioRef.current.src = songs[currentSong].url;
+            audioRef.current.load(); // Asegura que el navegador cargue la nueva fuente
             if (isPlaying) {
-                audioRef.current.play();
+                audioRef.current.play().catch((error) => console.error("Error al reproducir:", error));
             }
         }
-    }, [currentSong, isPlaying, songs]); // Se agregó songs como dependencia
+    }, [currentSong]); // Eliminamos isPlaying de la dependencia para evitar loops innecesarios
+    
+    
 
 
     useEffect(() => {
@@ -147,7 +155,11 @@ export default function MusicPlayer() {
                     </Button>
                 </div>
             </div>
-            <audio ref={audioRef} onEnded={nextSong} />
+            <audio ref={audioRef} src={songs[currentSong].url} onEnded={nextSong}   onLoadedMetadata={() => {
+      if (isPlaying) {
+          audioRef.current?.play();
+      }
+  }}  />
         </div>
     )
 }

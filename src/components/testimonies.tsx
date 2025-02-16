@@ -25,18 +25,18 @@ export function Testimonies() {
                     </div>
                     <div className="flex items-center justify-between w-full">
                         <p className="w-[25%] font-[100]">004</p>
-                        <p className="w-[50%] font-[100]">work</p>
+                        <p className="w-[50%] font-[100]">Testimonios</p>
                         <p className="w-[25%] text-end font-[100]">©2025</p>
                     </div>
                 </div> {/* acá voy a poner los bordes esos */}
                 <div className="flex items-center w-full justify-between">
-                    <h1 ref={textRef} className="font-unbounded text-[5.5rem] leading-none my-4 max-1100:text-[4.5rem] max-800:text-[3.2rem] max-700:text-[3.5rem] max-600:text-[3rem] max-500:text-[2.2rem] max-400:text-[1.7rem]">TESTIMONIES</h1>
+                    <h1 ref={textRef} className="font-unbounded text-[5.5rem] leading-none my-4 max-1100:text-[4.5rem] max-800:text-[3.2rem] max-700:text-[3.5rem] max-600:text-[3rem] max-500:text-[2.2rem] max-400:text-[1.7rem]">TESTIMONIOS</h1>
                     <p ref={textRef} className="font-unbounded text-[2rem] max-700:text-[1.7rem] text-[#878787]">(4)</p>
                 </div> {/* acá va el titulo grande "SELECTED WORKS" */}
                 <div className="w-full">
                     <div ref={textRef} className="flex gap-5 w-full text-[1.5rem] max-1100:text-[1rem]">
                         <span className="font-poppins text-[#777]">{'//'}</span>
-                        <p className="font-poppins text-[#777]">Helping brands grow and tell their stories to the world.</p>
+                        <p className="font-poppins text-[#777]">Un vistazo desde el otro lado</p>
                     </div>
                 </div> {/* acá va el coso con el texto más chico */}
             </div>

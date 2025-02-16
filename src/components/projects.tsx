@@ -18,18 +18,18 @@ export default function Projects() {
                     </div>
                     <div className="flex items-center justify-between w-full">
                         <p className="w-[25%] font-[100]">003</p>
-                        <p className="w-[50%] font-[100]">work</p>
+                        <p className="w-[50%] font-[100]">Proyectos</p>
                         <p className="w-[25%] text-end font-[100]">©2025</p>
                     </div>
                 </div> {/* acá voy a poner los bordes esos */}
                 <div className="flex items-center w-full justify-between">
                     <p ref={textRef} className="font-unbounded text-[2rem] text-[#878787]">(3)</p>
-                    <h1 ref={textRef} className="font-unbounded text-[5.5rem] text-end leading-none my-4 max-1100:text-[4.5rem] max-700:text-[3.5rem] max-600:text-[3rem] max-500:text-[2.4rem] max-400:text-[2rem]">SELECTED WORKS</h1>
+                    <h1 ref={textRef} className="font-unbounded text-[5.5rem] text-end leading-none my-4 max-1100:text-[4.5rem] max-700:text-[3.5rem] max-600:text-[3rem] max-500:text-[2.4rem] max-400:text-[2rem]">PROYECTOS</h1>
                 </div> {/* acá va el titulo grande "SELECTED WORKS" */}
                 <div className="w-full">
                     <div ref={textRef} className="flex justify-end gap-5 w-full text-[1.5rem] max-1100:text-[1rem]">
                         <span className="font-poppins text-[#777]">{'//'}</span>
-                        <p className="font-poppins text-[#777]">Helping brands grow and tell their stories to the world.</p>
+                        <p className="font-poppins text-[#777]">Contribuyo al crecimiento empresarial, llevando historias únicas al mundo</p>
                     </div>
                 </div> {/* acá va el coso con el texto más chico */}
             </div>
@@ -123,7 +123,7 @@ export default function Projects() {
                             <div className="bg-[#262626] p-2 rounded-[0.2rem] rounded-br-[1.2rem]">
                                 <div className="relative w-full flex justify-between">
                                     <div className="w-full flex items-center justify-center text-[1.2rem]">
-                                        <p className="z-10 max-700:text-[1rem]">All Works</p>
+                                        <p className="z-10 max-700:text-[1rem]">Ver más</p>
                                         <div className="absolute left-0 w-0 h-full bg-none rounded-[0.2rem] rounded-br-[1.2rem] group-hover:w-[100%] group-hover:bg-[#ea3c06] transition-all ease-in-out duration-500"></div>
                                     </div>
                                     <div className="flex items-center justify-center bg-[#505050] px-6 py-5 rounded-[0.2rem] rounded-br-[1.2rem] group-hover:bg-[#262626]  transition-all ease-in-out duration-200">

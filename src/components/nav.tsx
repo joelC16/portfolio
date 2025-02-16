@@ -19,6 +19,7 @@ import { SiGmail } from "react-icons/si";
 import { useTextAnimationInicio, useHoverEffect } from "@/hooks/useTextAnimation";
 
 const sections = ["home", "about", "projects", "testimonies", "contact"];
+const seccionesES = [{name:"Inicio", sections: "home"}, {name:"Sobre mi", sections: "about"}, {name:"Proyectos", sections: "projects"}, {name:"Testimonios", sections: "testimonies"}, {name:"Contacto", sections: "contact"}]
 
 export default function Nav() {
 
@@ -83,7 +84,7 @@ export default function Nav() {
                     <li className="hidden md:block">
                         <Link href={"#about"}>
                             <p ref={(el) => { if (el) hoverText.current.push(el); }}>
-                                About
+                                Sobre mi
                                 <span className="block h-[2px] bg-[#ea3c06] w-[0%] rounded-[4px]"></span>
                             </p>
                         </Link>
@@ -91,7 +92,7 @@ export default function Nav() {
                     <li className="hidden md:block">
                         <Link href={"#projects"}>
                             <p ref={(el) => { if (el) hoverText.current.push(el); }}>
-                                Projects
+                                Proyectos
                                 <span className="block h-[2px] bg-[#ea3c06] w-[0%] rounded-[4px]"></span>
                             </p>
                         </Link>
@@ -99,7 +100,7 @@ export default function Nav() {
                     <li className="hidden md:block">
                         <Link href={"#testimonies"}>
                             <p ref={(el) => { if (el) hoverText.current.push(el); }}>
-                                Testimonies
+                                Testimonios
                                 <span className="block h-[2px] bg-[#ea3c06] w-[0%] rounded-[4px]"></span>
                             </p>
                         </Link>
@@ -107,7 +108,7 @@ export default function Nav() {
                     <li className="hidden md:block">
                         <Link href={"#contact"}>
                             <p ref={(el) => { if (el) hoverText.current.push(el); }}>
-                                Contact
+                                Contacto
                                 <span className="block h-[2px] bg-[#ea3c06] w-[0%] rounded-[4px]"></span>
                             </p>
                         </Link>
@@ -118,7 +119,7 @@ export default function Nav() {
                 <div ref={textRef} className="bg-[#262626] p-1 rounded-[0.2rem] rounded-br-[1.2rem] border border-[#0f0f0f]">
                     <div className="relative w-full flex justify-between">
                         <div className="w-full flex items-center justify-center text-[1.2rem]">
-                            <p className="z-10 text-[1rem]">Get in touch</p>
+                            <p className="z-10 text-[1rem]">Contáctame</p>
                             <div className="absolute left-0 w-0 h-full bg-none rounded-[0.2rem] rounded-br-[1.2rem] border border-[#262626] group-hover:w-[100%] group-hover:bg-[#ea3c06] transition-all ease-in-out duration-500"></div>
                         </div>
                         <div className="flex items-center justify-center bg-[#505050] px-3 py-2 rounded-[0.2rem] rounded-br-[1.2rem] group-hover:bg-[#262626]  transition-all ease-in-out duration-200">
@@ -163,21 +164,21 @@ export default function Nav() {
                     </button>
                 </div>
                 <div className="flex flex-col h-full w-full border border-[#262626] rounded-[0.3rem]">
-                    {sections.map((section) => (
+                    {seccionesES.map((section) => (
                         <Link
-                            key={section}
-                            href={`#${section}`}
+                            key={section.sections}
+                            href={`#${section.sections}`}
                             className="flex items-center justify-between py-5 pl-5 border-b border-[#262626]"
                             onClick={() => setMenuOpen(!menuOpen)}
                         >
                             <div className="flex items-center gap-4">
                                 <p className="text-[1rem] text-[#777]">/01</p>
                                 <p ref={(el) => { if (el) hoverText.current.push(el); }} className="text-[2.5rem] font-unbounded max-600:text-[2rem] max-500:text-[1.5rem] max-400:text-[1rem]">
-                                    {section.charAt(0).toUpperCase() + section.slice(1)}
+                                    {section.name.charAt(0).toUpperCase() + section.name.slice(1)}
                                     <span className="block h-[2px] bg-[#ea3c06] w-[0%] rounded-[4px]"></span>
                                 </p>
                             </div>
-                            <div className={`w-2 h-2 rounded-full ${activeSection == section ? "bg-[#ea3c06]" : "bg-[#777]"}  mr-5`}></div>
+                            <div className={`w-2 h-2 rounded-full ${activeSection == section.sections ? "bg-[#ea3c06]" : "bg-[#777]"}  mr-5`}></div>
                         </Link>
                     ))}
 

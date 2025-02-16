@@ -9,7 +9,7 @@ export default function Inicio() {
   const textRef = useTextAnimationInicio();
 
   return (
-    <div id="home" className="flex justify-between flex-col w-full h-[80vh] px-[7.5%] mt-[5vh] mb-[20vh] font-poppins">
+    <div id="home" className="flex justify-between flex-col gap-10 w-full h-[80vh] min-h-fit px-[7.5%] mt-[5vh] mb-[20vh] font-poppins">
       <div className="flex">
         <div className="w-full">
           <h1 ref={textRef} className="font-unbounded text-[5.5rem] leading-none max-1100:text-[4.5rem] max-700:text-[3.5rem] max-600:text-[3rem] max-500:text-[2.4rem] max-400:text-[2rem]">WEB <br /> DEVELOPER</h1>
@@ -20,7 +20,7 @@ export default function Inicio() {
         <div ref={textRef} className="flex w-full">
           <div className="flex flex-col items-end justify-between w-full">
             <p className="h-[25%] font-[100] max-500:text-[0.8rem]">001</p>
-            <p className="h-[50%] font-[100] max-500:text-[0.8rem]">Main</p>
+            <p className="h-[50%] font-[100] max-500:text-[0.8rem]">Inicio</p>
             <p className="flex items-end h-[25%] font-[100] max-500:text-[0.8rem]">©2025</p>
           </div>
           <div className="h-[93.5%] w-3 flex border-t border-b border-r border-[#262626] mt-3 ml-1">
@@ -38,7 +38,7 @@ export default function Inicio() {
           </Link>
         </div>
 
-        <p ref={textRef} className="text-[1.3rem] ml-4 w-[30%] max-1200:text-[1rem] max-1000:w-[35%] max-1000:text-[0.9rem] max-900:w-[50%] max-900:mt-3 max-900:text-end max-500:w-[90%]">Web developer with experience in Next.js. Focused on creating clean, functional websites and always eager to learn new technologies.</p>
+        <p ref={textRef} className="text-[1.3rem] ml-4 w-[30%] max-1200:text-[1rem] max-1000:w-[35%] max-1000:text-[0.9rem] max-900:w-[50%] max-900:mt-3 max-900:text-end max-500:w-[90%]">Desarrollador web con experiencia en Next.js. Enfocado en crear sitios web limpios, funcionales y siempre con ganas de aprender nuevas tecnologías.</p>
         <h1 ref={textRef} className="font-unbounded text-[5.5rem] text-end leading-none max-1100:text-[4.5rem] max-700:text-[3.5rem] max-600:text-[3rem] max-500:text-[2.4rem] max-400:text-[2rem]">JOEL <br /> CORDERO</h1>
       </div>
 
