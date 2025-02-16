@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import Nav from "@/components/nav";
 import Inicio from "@/components/inicio";
@@ -13,6 +13,16 @@ import Footer from "@/components/footer";
 
 
 export default function Home() {
+
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null; // Evitar renderizar la imagen en el servidor
+  }
 
   // Hace que cuando se aprete el espacio no se haga scroll, es para que funcione el trex
   useEffect(() => {
