@@ -64,7 +64,7 @@ export default function About() {
 
                     </div>
                     <div className="flex items-center justify-center p-4">
-                        <p>I’m a <span className="text-[#ea3c06]">web developer</span> with a passion for creating intuitive user experiences. Currently studying  <span className="text-[#ea3c06]">Systems Analysis</span> at UBA, I have hands-on experience with HTML, CSS, JavaScript, React, and <span className="text-[#ea3c06]">Next.js</span>. I'm driven by challenges and always looking to improve my skills. My goal is to build efficient websites that <span className="text-[#ea3c06]">solve real-world problems</span>.</p>
+                        <p>I&apos;m a <span className="text-[#ea3c06]">web developer</span> with a passion for creating intuitive user experiences. Currently studying <span className="text-[#ea3c06]">Systems Analysis</span> at UBA, I have hands-on experience with HTML, CSS, JavaScript, React, and <span className="text-[#ea3c06]">Next.js</span>. I&apos;m driven by challenges and always looking to improve my skills. My goal is to build efficient websites that <span className="text-[#ea3c06]">solve real-world problems</span>.</p>
                     </div>
                 </div>
                 <div ref={boxRef} className="absolute top-0 left-[60%] w-min border border-[#262626] rounded-[0.3rem] max-1100:left-[70%] max-1000:top-[5%] max-1000:left-[65%]">
@@ -227,7 +227,7 @@ export default function About() {
 
                     </div>
                     <div className="flex items-center justify-center p-4">
-                        <p>I’m a <span className="text-[#ea3c06]">web developer</span> with a passion for creating intuitive user experiences. Currently studying  <span className="text-[#ea3c06]">Systems Analysis</span> at UBA, I have hands-on experience with HTML, CSS, JavaScript, React, and <span className="text-[#ea3c06]">Next.js</span>. I'm driven by challenges and always looking to improve my skills. My goal is to build efficient websites that <span className="text-[#ea3c06]">solve real-world problems</span>.</p>
+                        <p>I&apos;m a <span className="text-[#ea3c06]">web developer</span> with a passion for creating intuitive user experiences. Currently studying <span className="text-[#ea3c06]">Systems Analysis</span> at UBA, I have hands-on experience with HTML, CSS, JavaScript, React, and <span className="text-[#ea3c06]">Next.js</span>. I&apos;m driven by challenges and always looking to improve my skills. My goal is to build efficient websites that <span className="text-[#ea3c06]">solve real-world problems</span>.</p>
                     </div>
                 </div>
                 <div className=" w-min border border-[#262626] rounded-[0.3rem] max-600:w-full">
