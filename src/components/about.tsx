@@ -3,9 +3,7 @@
 import Trex from "./trex";
 import MusicPlayer from "./music-player";
 
-import Image from "next/image";
 import Link from "next/link";
-import { useRef, useEffect } from "react";
 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
