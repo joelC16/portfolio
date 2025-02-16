@@ -1,4 +1,4 @@
-
+"use client"
 
 
 import {useTextAnimationProjects} from "@/hooks/useTextAnimation";
