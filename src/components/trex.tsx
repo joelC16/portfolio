@@ -9,10 +9,10 @@ export default function Trex() {
     const [gameStarted, setGameStarted] = useState(false);
     const kingImageRef = useRef<HTMLImageElement | null>(null);
 
-    let dino = { x: 50, y: 120, width: 60, height: 60, velocityY: -10, jumping: false };
-    let gravity = 1.1;
+    const dino = { x: 50, y: 120, width: 60, height: 60, velocityY: -10, jumping: false };
+    const gravity = 1.1;
     let obstacles: { x: number; y: number; width: number; height: number; imageIndex: number }[] = [];
-    let speed = 6.5;
+    const speed = 6.5;
     let frame = 0;
     let animationFrameId: number;
     let nextObstacleFrame = 90 + Math.floor(Math.random() * 11);
