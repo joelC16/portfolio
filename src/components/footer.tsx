@@ -1,3 +1,4 @@
+"use client"
 import { useHoverEffect, useTextAnimationFooter } from "@/hooks/useTextAnimation";
 import Image from "next/image";
 import Link from "next/link";
