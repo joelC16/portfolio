@@ -87,7 +87,7 @@ export default function Footer() {
                     <span className="block h-[2px] bg-[#ea3c06] w-[0%] rounded-[4px]"></span>
                   </p>
                 </Link>
-                <Link href={"/"} className="hidden max-1000:text-[0.8rem] max-800:block">
+                <Link href={"https://www.linkedin.com/in/joel-cordero-8998232a2"} className="hidden max-1000:text-[0.8rem] max-800:block">
                   <p ref={(el) => { if (el) hoverText.current.push(el); }} className="w-fit">
                     Linkedin
                     <span className="block h-[2px] bg-[#ea3c06] w-[0%] rounded-[4px]"></span>
@@ -117,7 +117,7 @@ export default function Footer() {
                   alt="Contact"
                   className="relative left-[-15] bottom-[-12]"
                 ></Image>
-                <Link href={"www.linkedin.com/in/joel-cordero-8998232a2"} className="max-1000:text-[0.8rem]">
+                <Link href={"https://www.linkedin.com/in/joel-cordero-8998232a2"} className="max-1000:text-[0.8rem]">
                   <p ref={(el) => { if (el) hoverText.current.push(el); }} className="w-fit">
                     Linkedin
                     <span className="block h-[2px] bg-[#ea3c06] w-[0%] rounded-[4px]"></span>
