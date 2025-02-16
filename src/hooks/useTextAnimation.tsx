@@ -185,20 +185,29 @@ const useHoverEffect = () => {
   
     useEffect(() => {
       const handleHoverIn = (index: number) => {
-        gsap.to(textRefs.current[index]?.querySelector("span")!, {
-          width: "100%", // La línea crece
-          duration: 0.4, // Duración de la animación
+      const spanElement = textRefs.current[index]?.querySelector("span");
+      if (spanElement) {
+        gsap.to(spanElement, {
+          width: "100%",
+          duration: 0.4,
           ease: "power2.out",
         });
+      }
+
       };
   
       const handleHoverOut = (index: number) => {
-        gsap.to(textRefs.current[index]?.querySelector("span")!, {
-          width: "0%", // La línea se reduce
-          duration: 0.4,
-          ease: "power2.in",
-        });
+        const spanElement = textRefs.current[index]?.querySelector("span");
+
+        if (spanElement) {
+          gsap.to(spanElement, {
+            width: "0%",
+            duration: 0.4,
+            ease: "power2.in",
+          });
+        }
       };
+
   
       textRefs.current.forEach((el, index) => {
         if (el) {
