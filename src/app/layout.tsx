@@ -1,3 +1,5 @@
+
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Unbounded, Poppins } from "next/font/google";
 import "./globals.css";
 
@@ -22,6 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${unbounded.variable} ${poppins.variable} antialiased`}>
         {children}
+        <SpeedInsights/>
       </body>
     </html>
   );
