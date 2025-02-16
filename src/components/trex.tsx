@@ -126,7 +126,7 @@ export default function Trex() {
             frame++;
 
             // Dibujar y mover obstáculos
-            obstacles.forEach((obs, i) => {
+            obstacles.forEach((obs) => {
                 obs.x -= speed;
 
                 if (imagesLoaded === obstacleImages.length) {
