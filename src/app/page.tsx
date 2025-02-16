@@ -14,15 +14,16 @@ import Footer from "@/components/footer";
 
 export default function Home() {
 
-  const [isClient, setIsClient] = useState(false);
+  // const [isClient, setIsClient] = useState(false);
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+  // useEffect(() => {
+  //   setIsClient(true);
+  // }, []);
 
-  if (!isClient) {
-    return null; // Evitar renderizar la imagen en el servidor
-  }
+  // // Asegúrate de que el contenido solo se renderice en el cliente
+  // if (!isClient) {
+  //   return null; // Evitar renderizar el contenido en el servidor
+  // }
 
   // Hace que cuando se aprete el espacio no se haga scroll, es para que funcione el trex
   useEffect(() => {

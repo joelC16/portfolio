@@ -17,24 +17,36 @@ export default function Trex() {
     let animationFrameId: number;
     let nextObstacleFrame = 90 + Math.floor(Math.random() * 11);
 
-    // Cargar imagen del rey de ajedrez
+    // Estado para saber si estamos en el cliente
+    const [isClient, setIsClient] = useState(false);
+
+    // Cambia el estado cuando el componente se monta en el cliente
     useEffect(() => {
-        const img = new Image();
-        img.src = "/images/rey.png"; // Asegúrate de que esta ruta es correcta
-        kingImageRef.current = img;
+        setIsClient(true);
     }, []);
 
-    // Cargar imágenes de obstáculos
-    const obstacleImages = [
-        "/images/peon2.png",
-        "/images/torre2.png",
-        "/images/alfil2.png",
-        "/images/caballo2.png"
-    ].map((src) => {
-        const img = new Image();
-        img.src = src;
-        return img;
-    });
+    // Cargar imagen del rey de ajedrez solo en el cliente
+    useEffect(() => {
+        if (isClient) {
+            const img = new Image();
+            img.src = "/images/rey.png"; // Asegúrate de que esta ruta es correcta
+            kingImageRef.current = img;
+        }
+    }, [isClient]);
+
+    // Cargar imágenes de obstáculos solo en el cliente
+    const obstacleImages = isClient
+        ? [
+              "/images/peon2.png",
+              "/images/torre2.png",
+              "/images/alfil2.png",
+              "/images/caballo2.png",
+          ].map((src) => {
+              const img = new Image();
+              img.src = src;
+              return img;
+          })
+        : [];
 
     let imagesLoaded = 0;
     obstacleImages.forEach((img) => {
@@ -67,23 +79,22 @@ export default function Trex() {
 
     useEffect(() => {
         const canvas = canvasRef.current;
-        if (!canvas) return;
+        if (!canvas || !isClient) return; // Solo se ejecuta si es cliente
         const ctx = canvas.getContext("2d");
         if (!ctx) return;
 
         const gameLoop = () => {
             if (isGameOver) return;
 
+            // Crear un patrón de cuadros
+            const squareSize = 40; // Tamaño de los cuadros
+            for (let y = 0; y < canvas.height; y += squareSize) {
+                for (let x = 0; x < canvas.width; x += squareSize) {
+                    ctx.fillStyle = (x + y) % (squareSize * 2) === 0 ? "#0c0c0c" : "#111"; // Alternar colores claros
+                    ctx.fillRect(x, y, squareSize, squareSize);
+                }
+            }
 
-    // Crear un patrón de cuadros
-    const squareSize = 40; // Tamaño de los cuadros
-    for (let y = 0; y < canvas.height; y += squareSize) {
-        for (let x = 0; x < canvas.width; x += squareSize) {
-            ctx.fillStyle = (x + y) % (squareSize * 2) === 0 ? "#0c0c0c" : "#111"; // Alternar colores claros
-            ctx.fillRect(x, y, squareSize, squareSize);
-        }
-    }
- 
             // Dibujar el suelo
             ctx.fillStyle = "#222";
             ctx.fillRect(0, 190, canvas.width, 10);
@@ -160,19 +171,17 @@ export default function Trex() {
             document.removeEventListener("keydown", handleKeyDown);
             cancelAnimationFrame(animationFrameId);
         };
-    }, [isGameOver, gameStarted]);
+    }, [isGameOver, gameStarted, isClient]);
 
     return (
         <div className="relative flex flex-col items-center justify-center text-white">
             <p className="absolute top-2 right-3 text-white text-[0.8rem] font-unbounded">Puntaje: <span className="text-[#ea3c06]">{score}</span></p>
             <canvas ref={canvasRef} width={600} height={200} className="rounded-b-[0.2rem] max-1700:w-[550px] max-1500:w-[500px] max-1300:w-[400px]"></canvas>
 
-
             <div className="absolute flex flex-col items-center mt-4">
                 <h2 className={`text-xl font-unbounded ${isGameOver ? "text-[#ea3c06]" : "text-[#0c0c0c00]"}`}>GAME OVER</h2>
                 <p className={`mt-2 font-unbounded ${isGameOver ? "text-white" : "text-[#0c0c0c00]"}`}>Presiona ESPACIO para reiniciar</p>
             </div>
-
         </div>
     );
 }
