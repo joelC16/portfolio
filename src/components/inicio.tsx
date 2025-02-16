@@ -13,7 +13,7 @@ export default function Inicio() {
       <div className="flex">
         <div className="w-full">
           <h1 ref={textRef} className="font-unbounded text-[5.5rem] leading-none max-1100:text-[4.5rem] max-700:text-[3.5rem] max-600:text-[3rem] max-500:text-[2.4rem] max-400:text-[2rem]">WEB <br /> DEVELOPER</h1>
-          <Image ref={textRef} src={"/images/imagenInicio3.jpg"} width={600} height={400} alt="Web developer" className="w-full h-[200px] object-cover max-600:h-[350px]"></Image>
+          <Image src={"/images/imagenInicio3.jpg"} width={600} height={400} alt="Web developer" className="w-full h-[200px] object-cover max-600:h-[350px]"></Image>
         </div>
         <div ref={textRef} className="flex w-full">
           <div className="flex flex-col items-end justify-between w-full">
