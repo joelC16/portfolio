@@ -28,7 +28,7 @@ export default function Projects() {
                 </div> {/* acá va el titulo grande "SELECTED WORKS" */}
                 <div className="w-full">
                     <div ref={textRef} className="flex justify-end gap-5 w-full text-[1.5rem] max-1100:text-[1rem]">
-                        <span className="font-poppins text-[#777]">//</span>
+                        <span className="font-poppins text-[#777]">{'//'}</span>
                         <p className="font-poppins text-[#777]">Helping brands grow and tell their stories to the world.</p>
                     </div>
                 </div> {/* acá va el coso con el texto más chico */}
