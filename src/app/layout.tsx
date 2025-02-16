@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Unbounded, Poppins } from "next/font/google";
 import "./globals.css";
 
