@@ -35,11 +35,16 @@ export default function MusicPlayer() {
     ]
 
     const togglePlay = () => {
-        if (audioRef.current) {
-            isPlaying ? audioRef.current.pause() : audioRef.current.play()
-            setIsPlaying(!isPlaying)
+      if (audioRef.current) {
+        if (isPlaying) {
+          audioRef.current.pause();
+        } else {
+          audioRef.current.play();
         }
-    }
+        setIsPlaying(!isPlaying);
+      }
+    };
+
 
     const restartSong = () => {
         if (audioRef.current) {
@@ -72,13 +77,14 @@ export default function MusicPlayer() {
     }
 
     useEffect(() => {
-        if (audioRef.current) {
-            audioRef.current.src = songs[currentSong].url
+        if (audioRef.current && songs.length > 0) {
+            audioRef.current.src = songs[currentSong].url;
             if (isPlaying) {
-                audioRef.current.play()
+                audioRef.current.play();
             }
         }
-    }, [currentSong, isPlaying])
+    }, [currentSong, isPlaying, songs]); // Se agregó songs como dependencia
+
 
     useEffect(() => {
         const audio = audioRef.current
