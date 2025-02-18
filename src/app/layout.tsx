@@ -22,6 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+
       <body className={`${unbounded.variable} ${poppins.variable} antialiased`}>
         {children}
         <SpeedInsights/>
