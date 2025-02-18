@@ -1,11 +1,9 @@
 "use client"
 
 
-import Nav from "@/components/nav";
 import ItemProjectWork from "@/components/itemProjectWork";
 
 import Link from "next/link";
-import Image from "next/image";
 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
