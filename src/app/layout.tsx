@@ -3,6 +3,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Unbounded, Poppins } from "next/font/google";
 import "./globals.css";
 
+import { Analytics } from "@vercel/analytics/react"
+
 import SmoothScroll from "@/components/SmoothScroll";
 
 const unbounded = Unbounded({
@@ -42,6 +44,7 @@ export default function RootLayout({
           {children}
         </SmoothScroll>
         <SpeedInsights />
+        <Analytics/>
       </body>
     </html>
   );
