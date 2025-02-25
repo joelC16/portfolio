@@ -38,19 +38,20 @@ export default function Projects() {
             <div className="flex flex-col w-full mt-[5vh] border border-[#262626] rounded-[1rem]">
                 <div className="flex w-full max-1000:flex-col">
                     <div ref={textRef} className="w-full h-fit border-r border-b border-[#262626] max-1000:border-r-0 hover:bg-gradient-to-b hover:from-[#0c0c0c] hover:to-[#1f1f1faf]">
-                        <Link href={"/works/fynan"} className="flex flex-col gap-4 px-9 pt-9 pb-4">
+                        <Link href={"/works/eclipso"} className="flex flex-col gap-4 px-9 pt-9 pb-4">
                             <div>
-                                <Image src={"/images/imageFynan.png"} width={500} height={500} alt="Fynan una empresa de crypto" className="w-full rounded-[1.5rem] object-cover"></Image>
+                                <Image src={"/images/imageEclipso.png"} width={500} height={500} alt="Eclipso una empresa que da soluciones web" className="w-full rounded-[1.5rem] object-cover"></Image>
                             </div>
                             <div className="flex items-center justify-between max-500:flex-col">
                                 <div className="flex items-center">
                                     <Image src={"/images/plus.svg"} width={60} height={60} alt="Project"></Image>
-                                    <p className="text-[1.4rem] max-600:text-[1rem]">Fynan</p>
+                                    <p className="text-[1.4rem] max-600:text-[1rem]">Eclipso</p>
                                 </div>
                                 <div className="flex items-center">
+                                    <p className="px-4 py-1 border border-[#262626] rounded-[1.5rem] font-[100] max-600:text-[1rem]">NextJS</p>
+                                    <p className="px-4 py-1 border border-[#262626] rounded-[1.5rem] font-[100] max-600:text-[1rem]">TS</p>
+                                    <p className="px-4 py-1 border border-[#262626] rounded-[1.5rem] font-[100] max-600:text-[1rem]">Tailwind</p>
                                     <p className="px-4 py-1 border border-[#262626] rounded-[1.5rem] font-[100] max-600:text-[1rem]">GSAP</p>
-                                    <p className="px-4 py-1 border border-[#262626] rounded-[1.5rem] font-[100] max-600:text-[1rem]">JS</p>
-                                    <p className="px-4 py-1 border border-[#262626] rounded-[1.5rem] font-[100] max-600:text-[1rem]">CSS</p>
                                 </div>
                             </div>
                         </Link>
