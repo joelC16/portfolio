@@ -48,7 +48,7 @@ export default function Works() {
                     </div>
                 </Link>
             </nav>
-            <div id="about" className="flex flex-col w-full mb-[20vh] font-poppins">
+            <div id="about" className="flex flex-col w-full mb-[20vh] font-poppins h-full">
                 <div className="flex flex-col w-full mt-[7.5vh] mb-[10vh] px-[7.5%]">
                     <div ref={textRef} className="flex flex-col w-full">
                         <div className="h-3 border-t border-l border-r border-[#262626] mb-2">
@@ -65,8 +65,8 @@ export default function Works() {
                         <p ref={textRef} className="font-unbounded text-[2rem] text-[#878787]">(6)</p>
                     </div> {/* acá va el titulo grande "SELECTED WORKS" */}
                 </div>
-                <div className="px-[5%] max-1200:px-[12.5%]">
-                    <div className="flex flex-col gap-16 container-boxes-about relative w-full h-[90vh] min-h-[1400px] max-1200:h-auto">
+                <div className="px-[5%] max-1200:px-[12.5%] h-[180vh] mb-20">
+                    <div className="flex flex-col pb-20 gap-16 container-boxes-about relative w-full h-auto min-h-[1400px] max-1200:h-auto">
                         <ItemProjectWork
                             classname="absolute top-16 w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
                             inlineStyles={{ left: "calc(20% - 200px)" }}
@@ -100,32 +100,39 @@ export default function Works() {
                         <ItemProjectWork
                             classname="absolute top-[480px] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
                             inlineStyles={{ left: "calc(70% - 200px)" }}
-                            title="Fynan"
-                            srcImg="/images/imageFynan.png"
-                            year={2023}
-                            href="/works/fynan"
+                            title="Fabi Mersan"
+                            srcImg="/images/imageFabimersan.png"
+                            year={2025}
+                            href="/works/fabimersan"
                         ></ItemProjectWork>
 
 
                         <ItemProjectWork
                             classname="absolute top-[920px] left-[70%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
                             inlineStyles={{ left: "calc(80% - 200px)" }}
-                            title="Fynan"
-                            srcImg="/images/imageFynan.png"
-                            year={2023}
-                            href="/works/fynan"
+                            title="Neural Genius"
+                            srcImg="/images/imageNeural.png"
+                            year={2024}
+                            href="/works/neural"
                         ></ItemProjectWork>
 
                         <ItemProjectWork
                             classname="absolute top-[1050px] left-[20%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
                             inlineStyles={{ left: "calc(20% - 200px)" }}
-                            title="Fynan"
-                            srcImg="/images/imageFynan.png"
-                            year={2023}
-                            href="/works/fynan"
+                            title="Habitue"
+                            srcImg="/images/imageHabitue.png"
+                            year={2024}
+                            href="/works/habitue"
                         ></ItemProjectWork>
 
-
+                        <ItemProjectWork
+                            classname="absolute top-[1400px] left-[60%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
+                            inlineStyles={{ left: "calc(60% - 200px)" }}
+                            title="Trackio"
+                            srcImg="/images/imageTrackio.png"
+                            year={2024}
+                            href="/works/trackio"
+                        ></ItemProjectWork>
 
 
 

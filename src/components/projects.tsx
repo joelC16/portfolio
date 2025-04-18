@@ -116,14 +116,14 @@ export default function Projects() {
 
                     </div>
                     <div ref={textRef} className="w-[28%] h-fit flex flex-col gap-4 border-r border-[#262626] max-1000:border-r-0 max-900:w-full max-1000:border-b max-1500:w-[50%] hover:bg-gradient-to-b hover:from-[#0c0c0c] hover:to-[#1f1f1faf]">
-                        <Link href={"/works/fynan"} className="flex flex-col gap-4 px-9 pt-9 pb-4">
+                        <Link href={"/works/neural"} className="flex flex-col gap-4 px-9 pt-9 pb-4">
                             <div>
-                                <Image src={"/images/imageFynan.png"} width={500} height={500} alt="Fynan una empresa de crypto" className="w-full rounded-[1.5rem] object-cover"></Image>
+                                <Image src={"/images/imageNeural.png"} width={500} height={500} alt="Neural es una empresa que da soluciones con inteligencia artificial" className="w-full rounded-[1.5rem] object-cover"></Image>
                             </div>
                             <div className="flex flex-col justify-between max-900:flex-row max-500:flex-col">
                                 <div className="flex items-center">
                                     <Image src={"/images/plus.svg"} width={60} height={60} alt="Project"></Image>
-                                    <p className="text-[1.4rem] max-600:text-[1rem]">Fynan</p>
+                                    <p className="text-[1.4rem] max-600:text-[1rem]">Neural Genius</p>
                                 </div>
                                 <div className="flex items-center">
                                     <p className="px-4 py-1 border border-[#262626] rounded-[1.5rem] font-[100] max-600:text-[1rem]">GSAP</p>

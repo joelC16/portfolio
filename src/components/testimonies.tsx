@@ -56,13 +56,16 @@ export function Testimonies() {
                                         <div className="flex gap-3 max-1300:flex-col">
                                             <div>
                                                 <Avatar className="w-12 h-12">
-                                                    <AvatarImage src="https://github.com/shadcn.png" />
+                                                    <AvatarImage 
+                                                        src="/images/perfilJaque.jpeg"
+                                                        className="object-cover w-full h-full" 
+                                                    />
                                                     <AvatarFallback>CN</AvatarFallback>
                                                 </Avatar>
                                             </div>
                                             <div>
                                                 <h3 className="text-[1.5rem] font-unbounded max-600:text-[1.3rem]">Jaque</h3>
-                                                <p className="text-[1rem] max-600:text-[0.9rem]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum autem dolorem voluptatum odio cumque magnam. Lorem ipsum dolor sit amet, consectetur</p>
+                                                <p className="text-[1rem] max-600:text-[0.9rem]">Trabajar con Joel fue una experiencia súper fluida. Pude enfocarme en lo creativo sabiendo que él resolvía cada parte técnica. Hubo comunicación constante, organización en cada etapa y un resultado final que me dejó muy contenta.</p>
                                             </div>
                                         </div>
                                     </CardContent>
