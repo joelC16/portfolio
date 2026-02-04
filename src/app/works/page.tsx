@@ -65,7 +65,7 @@ export default function Works() {
                         <p ref={textRef} className="font-unbounded text-[2rem] text-[#878787]">(6)</p>
                     </div> {/* acá va el titulo grande "SELECTED WORKS" */}
                 </div>
-                <div className="px-[5%] max-1200:px-[12.5%] h-[180vh] mb-20">
+                <div className="px-[5%] max-1200:px-[12.5%] min-h-[260vh] mb-20">
                     <div className="flex flex-col pb-20 gap-16 container-boxes-about relative w-full h-auto min-h-[1400px] max-1200:h-auto">
                         <ItemProjectWork
                             classname="absolute top-16 w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
@@ -134,10 +134,41 @@ export default function Works() {
                             href="/works/trackio"
                         ></ItemProjectWork>
 
+                        <ItemProjectWork
+                            classname="absolute top-[1650px] left-[15%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
+                            inlineStyles={{ left: "calc(15% - 200px)" }}
+                            title="Servicios Ambientales"
+                            srcImg="/images/imageServiciosAmbientales.png"
+                            year={2024}
+                            href="/works/serviciosambientales"
+                        ></ItemProjectWork>
 
+                        <ItemProjectWork
+                            classname="absolute top-[1850px] left-[80%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
+                            inlineStyles={{ left: "calc(80% - 200px)" }}
+                            title="Hire System"
+                            srcImg="/images/imageHireSystem.png"
+                            year={2025}
+                            href="/works/hiresystem"
+                        ></ItemProjectWork>
+                        
+                        <ItemProjectWork
+                            classname="absolute top-[2150px] left-[45%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
+                            inlineStyles={{ left: "calc(45% - 200px)" }}
+                            title="PDF Extractor"
+                            srcImg="/images/imagePDFExtractor.png"
+                            year={2025}
+                            href="/works/pdfextractor"
+                        ></ItemProjectWork>
 
-
-
+                        <ItemProjectWork
+                            classname="absolute top-[2150px] left-[45%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
+                            inlineStyles={{ left: "calc(45% - 200px)" }}
+                            title="Nutri Scanner"
+                            srcImg="/images/imageNutriScanner.png"
+                            year={2025}
+                            href="/works/nutriscanner"
+                        ></ItemProjectWork>
 
 
 
