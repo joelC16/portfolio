@@ -1,8 +1,7 @@
 "use client"
 
-
+import { useState } from "react";
 import ItemProjectWork from "@/components/itemProjectWork";
-
 import Link from "next/link";
 
 import { gsap } from "gsap";
@@ -15,10 +14,37 @@ gsap.registerPlugin(useGSAP, Draggable);
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { useHoverEffect, useTextAnimation } from "@/hooks/useTextAnimation";
 
+const PROJECT_CATEGORIES = ["Todos", "Web", "Dashboard", "IA", "Automatización", "E-commerce"] as const;
+
+const PROJECTS_DATA = [
+    { title: "Fynan", srcImg: "/images/imageFynan.png", year: 2023, href: "/works/fynan", tags: ["Web"] },
+    { title: "les Pères Nature", srcImg: "/images/lespesnature.png", year: 2023, href: "/works/lesperesnature", tags: ["Web"] },
+    { title: "Jaque", srcImg: "/images/imageJaque.png", year: 2024, href: "/works/jaque", tags: ["Web"] },
+    { title: "Fabi Mersan", srcImg: "/images/imageFabimersan.png", year: 2025, href: "/works/fabimersan", tags: ["Web"] },
+    { title: "Neural Genius", srcImg: "/images/imageNeural.png", year: 2024, href: "/works/neural", tags: ["Web", "IA"] },
+    { title: "Habitue", srcImg: "/images/imageHabitue.png", year: 2024, href: "/works/habitue", tags: ["Dashboard"] },
+    { title: "Trackio", srcImg: "/images/imageTrackio.png", year: 2024, href: "/works/trackio", tags: ["Dashboard"] },
+    { title: "Servicios Ambientales", srcImg: "/images/imageServiciosAmbientales.png", year: 2024, href: "/works/serviciosambientales", tags: ["Web"] },
+    { title: "Hire System", srcImg: "/images/imageHiresystem.png", year: 2025, href: "/works/hiresystem", tags: ["Web", "IA"] },
+    { title: "PDF Extractor", srcImg: "/images/imagePDFExtractor.png", year: 2025, href: "/works/pdfextractor", tags: ["Web"] },
+    { title: "Distribuidora B2B", srcImg: "/images/imageDistribuidoraB2B.png", year: 2024, href: "/works/distribuidorab2b", tags: ["E-commerce", "IA"] },
+    { title: "Parks Dashboard", srcImg: "/images/imageParksDashboard.png", year: 2024, href: "/works/parksdashboard", tags: ["Dashboard", "IA"] },
+    { title: "Doctor Dashboard", srcImg: "/images/imageDoctorDashboard.png", year: 2024, href: "/works/doctordashboard", tags: ["Dashboard", "IA"] },
+    { title: "Books Flights", srcImg: "/images/imageBooksFlights.png", year: 2024, href: "/works/booksflights", tags: ["Web", "IA"] },
+    { title: "Logistic App", srcImg: "/images/imageLogisticApp.png", year: 2024, href: "/works/logisticapp", tags: ["Dashboard"] },
+    { title: "Segasa", srcImg: "/images/imageSegasa.png", year: 2024, href: "/works/segasa", tags: ["Automatización"] },
+    { title: "Scrapper LinkedIn", srcImg: "/images/imageHiresystem.png", year: 2024, href: "/works/scrapperlinkedin", tags: ["Automatización"] },
+];
+
 export default function Works() {
 
+    const [activeFilter, setActiveFilter] = useState<string>("Todos");
     const textRef = useTextAnimation();
     const hoverText = useHoverEffect();
+
+    const filteredProjects = activeFilter === "Todos" 
+        ? PROJECTS_DATA 
+        : PROJECTS_DATA.filter((p) => p.tags.includes(activeFilter));
 
 
     return (
@@ -62,170 +88,38 @@ export default function Works() {
                     </div> {/* acá voy a poner los bordes esos */}
                     <div className="flex items-center w-full justify-between">
                         <h1 ref={textRef} className="font-unbounded text-[5.5rem] leading-none my-4 max-1100:text-[4.5rem] max-700:text-[3.5rem] max-600:text-[3rem] max-500:text-[2.4rem] max-400:text-[2rem]">PROYECTOS</h1>
-                        <p ref={textRef} className="font-unbounded text-[2rem] text-[#878787]">(17)</p>
-                    </div> {/* acá va el titulo grande "SELECTED WORKS" */}
+                        <p ref={textRef} className="font-unbounded text-[2rem] text-[#878787]">({PROJECTS_DATA.length})</p>
+                    </div>
+                    <div ref={textRef} className="flex flex-wrap gap-2 mt-4">
+                        {PROJECT_CATEGORIES.map((cat) => (
+                            <button
+                                key={cat}
+                                onClick={() => setActiveFilter(cat)}
+                                className={`px-4 py-2 text-sm font-poppins rounded-[5rem] border transition-all duration-300 ${
+                                    activeFilter === cat 
+                                        ? "border-[#ea3c06] text-[#ea3c06] bg-[#ea3c0610]" 
+                                        : "border-[#262626] text-[#888] hover:border-[#444] hover:text-white"
+                                }`}
+                            >
+                                {cat}
+                            </button>
+                        ))}
+                    </div>
                 </div>
-                <div className="px-[5%] max-1200:px-[12.5%] min-h-[450vh] mb-20">
-                    <div className="flex flex-col pb-20 gap-16 container-boxes-about relative w-full h-auto min-h-[4500px] max-1200:h-auto">
-                        <ItemProjectWork
-                            classname="absolute top-16 w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
-                            inlineStyles={{ left: "calc(20% - 200px)" }}
-                            title="Fynan"
-                            srcImg="/images/imageFynan.png"
-                            year={2023}
-                            href="/works/fynan"
-                        ></ItemProjectWork>
-
-
-                        <ItemProjectWork
-                            classname="absolute top-5 w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
-                            inlineStyles={{ left: "calc(80% - 200px)" }}
-                            title="les Pères Nature"
-                            srcImg="/images/lespesnature.png"
-                            year={2023}
-                            href="/works/lesperesnature"
-                        ></ItemProjectWork>
-
-
-                        <ItemProjectWork
-                            classname="absolute top-[750px] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
-                            inlineStyles={{ left: "calc(30% - 200px)" }}
-                            title="Jaque"
-                            srcImg="/images/imageJaque.png"
-                            year={2024}
-                            href="/works/jaque"
-                        ></ItemProjectWork>
-
-
-                        <ItemProjectWork
-                            classname="absolute top-[600px] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
-                            inlineStyles={{ left: "calc(70% - 200px)" }}
-                            title="Fabi Mersan"
-                            srcImg="/images/imageFabimersan.png"
-                            year={2025}
-                            href="/works/fabimersan"
-                        ></ItemProjectWork>
-
-
-                        <ItemProjectWork
-                            classname="absolute top-[1150px] left-[70%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
-                            inlineStyles={{ left: "calc(80% - 200px)" }}
-                            title="Neural Genius"
-                            srcImg="/images/imageNeural.png"
-                            year={2024}
-                            href="/works/neural"
-                        ></ItemProjectWork>
-
-                        <ItemProjectWork
-                            classname="absolute top-[1300px] left-[20%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
-                            inlineStyles={{ left: "calc(20% - 200px)" }}
-                            title="Habitue"
-                            srcImg="/images/imageHabitue.png"
-                            year={2024}
-                            href="/works/habitue"
-                        ></ItemProjectWork>
-
-                        <ItemProjectWork
-                            classname="absolute top-[1750px] left-[60%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
-                            inlineStyles={{ left: "calc(60% - 200px)" }}
-                            title="Trackio"
-                            srcImg="/images/imageTrackio.png"
-                            year={2024}
-                            href="/works/trackio"
-                        ></ItemProjectWork>
-
-                        <ItemProjectWork
-                            classname="absolute top-[2050px] left-[15%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
-                            inlineStyles={{ left: "calc(15% - 200px)" }}
-                            title="Servicios Ambientales"
-                            srcImg="/images/imageServiciosAmbientales.png"
-                            year={2024}
-                            href="/works/serviciosambientales"
-                        ></ItemProjectWork>
-
-                        <ItemProjectWork
-                            classname="absolute top-[2350px] left-[80%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
-                            inlineStyles={{ left: "calc(80% - 200px)" }}
-                            title="Hire System"
-                            srcImg="/images/imageHireSystem.png"
-                            year={2025}
-                            href="/works/hiresystem"
-                        ></ItemProjectWork>
-                        
-                        <ItemProjectWork
-                            classname="absolute top-[2650px] left-[45%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
-                            inlineStyles={{ left: "calc(45% - 200px)" }}
-                            title="PDF Extractor"
-                            srcImg="/images/imagePDFExtractor.png"
-                            year={2025}
-                            href="/works/pdfextractor"
-                        ></ItemProjectWork>
-
-                        {/* <ItemProjectWork
-                            classname="absolute top-[2600px] left-[45%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
-                            inlineStyles={{ left: "calc(45% - 200px)" }}
-                            title="Nutri Scanner"
-                            srcImg="/images/imageNutriScanner.png"
-                            year={2025}
-                            href="/works/nutriscanner"
-                        ></ItemProjectWork> */}
-
-                        <ItemProjectWork
-                            classname="absolute top-[3050px] left-[20%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
-                            inlineStyles={{ left: "calc(20% - 200px)" }}
-                            title="Distribuidora B2B"
-                            srcImg="/images/imageDistribuidoraB2B.png"
-                            year={2024}
-                            href="/works/distribuidorab2b"
-                        ></ItemProjectWork>
-
-                        <ItemProjectWork
-                            classname="absolute top-[3050px] left-[80%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
-                            inlineStyles={{ left: "calc(80% - 200px)" }}
-                            title="Parks Dashboard"
-                            srcImg="/images/imageParksDashboard.png"
-                            year={2024}
-                            href="/works/parksdashboard"
-                        ></ItemProjectWork>
-
-                        <ItemProjectWork
-                            classname="absolute top-[3450px] left-[50%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
-                            inlineStyles={{ left: "calc(50% - 200px)" }}
-                            title="Doctor Dashboard"
-                            srcImg="/images/imageDoctorDashboard.png"
-                            year={2024}
-                            href="/works/doctordashboard"
-                        ></ItemProjectWork>
-
-                        <ItemProjectWork
-                            classname="absolute top-[3850px] left-[15%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
-                            inlineStyles={{ left: "calc(15% - 200px)" }}
-                            title="Books Flights"
-                            srcImg="/images/imageBooksFlights.png"
-                            year={2024}
-                            href="/works/booksflights"
-                        ></ItemProjectWork>
-
-                        <ItemProjectWork
-                            classname="absolute top-[3850px] left-[75%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
-                            inlineStyles={{ left: "calc(75% - 200px)" }}
-                            title="Logistic App"
-                            srcImg="/images/imageLogisticApp.png"
-                            year={2024}
-                            href="/works/logisticapp"
-                        ></ItemProjectWork>
-
-                        <ItemProjectWork
-                            classname="absolute top-[4250px] left-[60%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
-                            inlineStyles={{ left: "calc(60% - 200px)" }}
-                            title="Segasa"
-                            srcImg="/images/imageSegasa.png"
-                            year={2024}
-                            href="/works/segasa"
-                        ></ItemProjectWork>
-
-
-
+                <div className="px-[5%] max-1200:px-[12.5%] mb-20">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-20">
+                        {filteredProjects.map((project) => (
+                            <ItemProjectWork
+                                key={project.href}
+                                classname="w-full border border-[#262626] rounded-[0.3rem]"
+                                inlineStyles={{}}
+                                title={project.title}
+                                srcImg={project.srcImg}
+                                year={project.year}
+                                href={project.href}
+                                tags={project.tags}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>

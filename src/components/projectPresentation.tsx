@@ -49,14 +49,19 @@ export default function ProjectPresentation({title, tecnologies, presentation, l
                         ))}
                     </div>
                     <p ref={textRef} className="w-[45%] font-poppins max-1000:text-[0.9rem] max-1000:w-[50%] max-800:w-[80%] max-800:text-[1rem] max-500:text-[0.9rem] max-500:w-[90%]">{presentation}</p>
-                    <div ref={textRef}>
+                    <div ref={textRef} className="flex flex-col gap-3">
                         <Link href={linkWeb} className="flex gap-2 items-center">
                             <p ref={(el) => { if (el) hoverText.current.push(el); }}>
                                 Ir a la web
                                 <span className="block h-[2px] bg-[#ea3c06] w-[0%] rounded-[4px]"></span>
                             </p>
-
                             <RxArrowTopRight />
+                        </Link>
+                        <Link href={"https://api.whatsapp.com/send?phone=5493484337681"} className="flex gap-2 items-center text-[#888] hover:text-[#ea3c06] transition-colors">
+                            <p ref={(el) => { if (el) hoverText.current.push(el); }}>
+                                ¿Quieres algo similar? Contáctame
+                                <span className="block h-[2px] bg-[#ea3c06] w-[0%] rounded-[4px]"></span>
+                            </p>
                         </Link>
                     </div>
 

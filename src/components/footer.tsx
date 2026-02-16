@@ -19,11 +19,11 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <div ref={textRef} className="w-5 h-5 rounded-full bg-white"></div>
             <p ref={textRef} className="text-[1.5rem] font-poppins leading-tight max-1200:text-[1.2rem] max-700:text-[1rem]">
-              ¿Listo para elevar tu marca?
+              ¿Landing, dashboard con IA o automatización?
             </p>
           </div>
           <p ref={textRef} className="text-[1.5rem] text-[#777] leading-tight max-1200:text-[1.2rem] max-700:text-[1rem]">
-            Deja un mensaje y comencemos a construir algo increíble juntos
+            Conversemos. Cuéntame tu proyecto y construyamos la solución que necesitas.
           </p>
         </div>
         <div className="w-full flex flex-col items-end justify-center">
@@ -87,7 +87,7 @@ export default function Footer() {
                     <span className="block h-[2px] bg-[#ea3c06] w-[0%] rounded-[4px]"></span>
                   </p>
                 </Link>
-                <Link href={"https://www.linkedin.com/in/joel-cordero-8998232a2"} className="hidden max-1000:text-[0.8rem] max-800:block">
+                <Link href={"https://www.linkedin.com/in/joel-cordero-tech/"} className="hidden max-1000:text-[0.8rem] max-800:block">
                   <p ref={(el) => { if (el) hoverText.current.push(el); }} className="w-fit">
                     Linkedin
                     <span className="block h-[2px] bg-[#ea3c06] w-[0%] rounded-[4px]"></span>
@@ -117,7 +117,7 @@ export default function Footer() {
                   alt="Contact"
                   className="relative left-[-15] bottom-[-12]"
                 ></Image>
-                <Link href={"https://www.linkedin.com/in/joel-cordero-8998232a2"} className="max-1000:text-[0.8rem]">
+                <Link href={"https://www.linkedin.com/in/joel-cordero-tech/"} className="max-1000:text-[0.8rem]">
                   <p ref={(el) => { if (el) hoverText.current.push(el); }} className="w-fit">
                     Linkedin
                     <span className="block h-[2px] bg-[#ea3c06] w-[0%] rounded-[4px]"></span>

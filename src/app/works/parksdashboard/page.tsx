@@ -32,7 +32,7 @@ export default function ParksDashboard() {
             title="Parks Dashboard" 
             tecnologies={["React", "Next.js", "TypeScript", "Tailwind", "AI"]} 
             presentation="Dashboard de gestión y monitoreo para parques desarrollado con Next.js y React. El sistema permite monitorear en tiempo real los niveles de tanques, analizar el consumo diario de recursos, y gestionar múltiples parques desde una interfaz centralizada. Incluye un asistente de IA integrado que ayuda en la toma de decisiones y resuelve consultas sobre la gestión de los parques. La plataforma ofrece visualizaciones claras de datos, alertas automáticas y reportes detallados para optimizar el uso de recursos y mejorar la eficiencia operativa."
-            linkWeb="#"
+            linkWeb="https://github.com/joelC16"
             galleryItems={galleryItems}
         >
         </ProjectPresentationWithGallery>

@@ -2,7 +2,7 @@
 
 import ProjectPresentation from "@/components/projectPresentation";
 
-export default function Eclipso() {
+export default function Neural() {
 
     return (
         <ProjectPresentation 

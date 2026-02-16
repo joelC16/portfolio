@@ -18,8 +18,8 @@ import { CiLinkedin } from "react-icons/ci";
 import { SiGmail } from "react-icons/si";
 import { useTextAnimationInicio, useHoverEffect } from "@/hooks/useTextAnimation";
 
-const sections = ["home", "about", "projects", "testimonies", "contact"];
-const seccionesES = [{name:"Inicio", sections: "home"}, {name:"Sobre mi", sections: "about"}, {name:"Proyectos", sections: "projects"}, {name:"Testimonios", sections: "testimonies"}, {name:"Contacto", sections: "contact"}]
+const sections = ["home", "about", "services", "projects", "testimonies", "contact"];
+const seccionesES = [{name:"Inicio", sections: "home"}, {name:"Sobre mi", sections: "about"}, {name:"Servicios", sections: "services"}, {name:"Proyectos", sections: "projects"}, {name:"Testimonios", sections: "testimonies"}, {name:"Contacto", sections: "contact"}]
 
 export default function Nav() {
 
@@ -85,6 +85,14 @@ export default function Nav() {
                         <Link href={"#about"}>
                             <p ref={(el) => { if (el) hoverText.current.push(el); }}>
                                 Sobre mi
+                                <span className="block h-[2px] bg-[#ea3c06] w-[0%] rounded-[4px]"></span>
+                            </p>
+                        </Link>
+                    </li>
+                    <li className="hidden md:block">
+                        <Link href={"#services"}>
+                            <p ref={(el) => { if (el) hoverText.current.push(el); }}>
+                                Servicios
                                 <span className="block h-[2px] bg-[#ea3c06] w-[0%] rounded-[4px]"></span>
                             </p>
                         </Link>
@@ -188,7 +196,7 @@ export default function Nav() {
                         <div className="absolute left-0 w-0 h-full bg-none rounded-[0.2rem] rounded-br-[1.2rem] group-hover:w-[100%] group-hover:bg-[#ea3c06] transition-all ease-in-out duration-500"></div>
                         <FaWhatsapp size={30} className="z-10 max-600:w-[18px]" />
                     </Link>
-                    <Link href="www.linkedin.com/in/joel-cordero-8998232a2" className="group relative flex items-center justify-center w-full border border-[#262626] rounded-[0.3rem] rounded-br-[1.2rem] py-6 overflow-hidden">
+                    <Link href="https://www.linkedin.com/in/joel-cordero-tech/" className="group relative flex items-center justify-center w-full border border-[#262626] rounded-[0.3rem] rounded-br-[1.2rem] py-6 overflow-hidden">
                         <div className="absolute left-0 w-0 h-full bg-none rounded-[0.2rem] rounded-br-[1.2rem] group-hover:w-[100%] group-hover:bg-[#ea3c06] transition-all ease-in-out duration-500"></div>
                         <CiLinkedin size={30} className="z-10 max-600:w-[18px]" />
                     </Link>

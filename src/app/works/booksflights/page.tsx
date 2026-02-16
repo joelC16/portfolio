@@ -27,7 +27,7 @@ export default function BooksFlights() {
             title="Books Flights" 
             tecnologies={["React", "Next.js", "TypeScript", "LangChain", "AI"]} 
             presentation="Plataforma de reserva de vuelos desarrollada con Next.js que integra un asistente de IA para mejorar la experiencia del usuario. El sistema permite buscar vuelos, comparar opciones, aplicar filtros avanzados y realizar reservas de manera intuitiva. El asistente de IA ayuda a los usuarios a encontrar las mejores opciones según sus preferencias, responder preguntas sobre vuelos y facilitar el proceso de reserva. La interfaz está diseñada para ser rápida, clara y eficiente, priorizando la usabilidad y la experiencia del usuario en cada paso del proceso de reserva."
-            linkWeb="#"
+            linkWeb="https://github.com/joelC16"
             galleryItems={galleryItems}
         >
         </ProjectPresentationWithGallery>

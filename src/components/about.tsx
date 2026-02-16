@@ -24,6 +24,7 @@ import { RiNextjsFill } from "react-icons/ri";
 import { SiPrisma } from "react-icons/si";
 import { SiOpenai } from "react-icons/si";
 import { SiPuppeteer } from "react-icons/si";
+import { SiLangchain, SiN8N } from "react-icons/si";
 import { useTextAnimation, useTextAnimationDraglabble } from "@/hooks/useTextAnimation";
 
 export default function About() {
@@ -190,8 +191,18 @@ export default function About() {
                                     GSAP
                                 </span>
                             </div>
-
-                            {/* Agrega más elementos según necesites */}
+                            <div className="relative group">
+                                <SiLangchain className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem]" />
+                                <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    LangChain
+                                </span>
+                            </div>
+                            <div className="relative group">
+                                <SiN8N className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem]" />
+                                <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    n8n
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -245,28 +256,28 @@ export default function About() {
                     <div className="flex items-center p-4">
                         <ul className="flex flex-col gap-3">
                             <li>
-                                <Link href={""} className="group flex items-center gap-3">
+                                <Link href={"https://api.whatsapp.com/send?phone=5493484337681"} className="group flex items-center gap-3">
                                     <p className="font-[100] group-hover:text-[#ea3c06] group-hover:font-[200] transition-[fill] ease-in-out duration-300">01</p>
                                     <p>Whatsapp</p>
                                     <MdOpenInNew className="fill-[#777] group-hover:fill-[#ea3c06] transition-all ease-in-out duration-300"></MdOpenInNew>
                                 </Link>
                             </li>
                             <li>
-                                <Link href={"www.linkedin.com/in/joel-cordero-8998232a2"} className="group flex items-center gap-3">
+                                <Link href={"https://www.linkedin.com/in/joel-cordero-tech/"} className="group flex items-center gap-3">
                                     <p className="font-[100] group-hover:text-[#ea3c06] group-hover:font-[200] transition-[fill] ease-in-out duration-300">02</p>
                                     <p>Linkedin</p>
                                     <MdOpenInNew className="fill-[#777] group-hover:fill-[#ea3c06] transition-all ease-in-out duration-300"></MdOpenInNew>
                                 </Link>
                             </li>
                             <li>
-                                <Link href={""} className="group flex items-center gap-3">
+                                <Link href={"https://github.com/joelC16"} className="group flex items-center gap-3">
                                     <p className="font-[100] group-hover:text-[#ea3c06] group-hover:font-[200] transition-[fill] ease-in-out duration-300">03</p>
                                     <p>Github</p>
                                     <MdOpenInNew className="fill-[#777] group-hover:fill-[#ea3c06] transition-all ease-in-out duration-300"></MdOpenInNew>
                                 </Link>
                             </li>
                             <li>
-                                <Link href={""} className="group flex items-center gap-3">
+                                <Link href={"mailto:joelcordero.tech@gmail.com"} className="group flex items-center gap-3">
                                     <p className="font-[100] group-hover:text-[#ea3c06] group-hover:font-[200] transition-[fill] ease-in-out duration-300">04</p>
                                     <p>Gmail</p>
                                     <MdOpenInNew className="fill-[#777] group-hover:fill-[#ea3c06] transition-all ease-in-out duration-300"></MdOpenInNew>
@@ -336,8 +347,18 @@ export default function About() {
                                     GSAP
                                 </span>
                             </div>
-
-                            {/* Agrega más elementos según necesites */}
+                            <div className="relative group flex items-center justify-center">
+                                <SiLangchain className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem] max-600:text-[3.8rem]" />
+                                <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    LangChain
+                                </span>
+                            </div>
+                            <div className="relative group flex items-center justify-center">
+                                <SiN8N className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem] max-600:text-[3.8rem]" />
+                                <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    n8n
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -17,7 +17,15 @@ import { GoHorizontalRule } from "react-icons/go";
 
 import { useHoverEffect, useTextAnimation } from "@/hooks/useTextAnimation";
 
-export default function ItemProjectWork({classname, inlineStyles, title, srcImg, year, href }:{classname:string, inlineStyles: React.CSSProperties, title: string, srcImg: string, year: number, href: string}) {
+export default function ItemProjectWork({classname, inlineStyles, title, srcImg, year, href, tags }:{
+    classname:string, 
+    inlineStyles: React.CSSProperties, 
+    title: string, 
+    srcImg: string, 
+    year: number, 
+    href: string,
+    tags?: string[]
+}) {
 
     const textRef = useTextAnimation();
     const hoverText = useHoverEffect();
@@ -36,7 +44,14 @@ export default function ItemProjectWork({classname, inlineStyles, title, srcImg,
                 </div>
             </div>
             <div className="flex flex-col justify-center p-4">
-                <Image src={srcImg} alt="Empresa lider en la web3" width={500} height={500} className="w-full"></Image>
+                <Image src={srcImg} alt={`${title} - Proyecto`} width={500} height={500} className="w-full"></Image>
+                {tags && tags.length > 0 && (
+                    <div className="flex flex-wrap gap-1 mt-2">
+                        {tags.map((tag) => (
+                            <span key={tag} className="text-[0.7rem] px-2 py-0.5 border border-[#262626] rounded-[5rem] text-[#888]">{tag}</span>
+                        ))}
+                    </div>
+                )}
                 <div className="flex items-center justify-between mt-4">
                     <h1>{year}</h1>
                     <div className=" border border-[#262626] rounded-[5rem]">

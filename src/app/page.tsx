@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import Nav from "@/components/nav";
 import Inicio from "@/components/inicio";
 import About from "@/components/about";
+import Services from "@/components/Services";
 import Projects from "@/components/projects";
 import { Testimonies } from '@/components/testimonies';
 import Footer from "@/components/footer";
@@ -33,6 +34,7 @@ export default function Home() {
       <Nav />
       <Inicio />
       <About></About>
+      <Services />
       <Projects />
       <Testimonies></Testimonies>
 
