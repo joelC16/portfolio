@@ -62,11 +62,11 @@ export default function Works() {
                     </div> {/* acá voy a poner los bordes esos */}
                     <div className="flex items-center w-full justify-between">
                         <h1 ref={textRef} className="font-unbounded text-[5.5rem] leading-none my-4 max-1100:text-[4.5rem] max-700:text-[3.5rem] max-600:text-[3rem] max-500:text-[2.4rem] max-400:text-[2rem]">PROYECTOS</h1>
-                        <p ref={textRef} className="font-unbounded text-[2rem] text-[#878787]">(6)</p>
+                        <p ref={textRef} className="font-unbounded text-[2rem] text-[#878787]">(17)</p>
                     </div> {/* acá va el titulo grande "SELECTED WORKS" */}
                 </div>
-                <div className="px-[5%] max-1200:px-[12.5%] min-h-[260vh] mb-20">
-                    <div className="flex flex-col pb-20 gap-16 container-boxes-about relative w-full h-auto min-h-[1400px] max-1200:h-auto">
+                <div className="px-[5%] max-1200:px-[12.5%] min-h-[450vh] mb-20">
+                    <div className="flex flex-col pb-20 gap-16 container-boxes-about relative w-full h-auto min-h-[4500px] max-1200:h-auto">
                         <ItemProjectWork
                             classname="absolute top-16 w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
                             inlineStyles={{ left: "calc(20% - 200px)" }}
@@ -88,7 +88,7 @@ export default function Works() {
 
 
                         <ItemProjectWork
-                            classname="absolute top-[600px] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
+                            classname="absolute top-[750px] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
                             inlineStyles={{ left: "calc(30% - 200px)" }}
                             title="Jaque"
                             srcImg="/images/imageJaque.png"
@@ -98,7 +98,7 @@ export default function Works() {
 
 
                         <ItemProjectWork
-                            classname="absolute top-[480px] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
+                            classname="absolute top-[600px] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
                             inlineStyles={{ left: "calc(70% - 200px)" }}
                             title="Fabi Mersan"
                             srcImg="/images/imageFabimersan.png"
@@ -108,7 +108,7 @@ export default function Works() {
 
 
                         <ItemProjectWork
-                            classname="absolute top-[920px] left-[70%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
+                            classname="absolute top-[1150px] left-[70%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
                             inlineStyles={{ left: "calc(80% - 200px)" }}
                             title="Neural Genius"
                             srcImg="/images/imageNeural.png"
@@ -117,7 +117,7 @@ export default function Works() {
                         ></ItemProjectWork>
 
                         <ItemProjectWork
-                            classname="absolute top-[1050px] left-[20%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
+                            classname="absolute top-[1300px] left-[20%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
                             inlineStyles={{ left: "calc(20% - 200px)" }}
                             title="Habitue"
                             srcImg="/images/imageHabitue.png"
@@ -126,7 +126,7 @@ export default function Works() {
                         ></ItemProjectWork>
 
                         <ItemProjectWork
-                            classname="absolute top-[1400px] left-[60%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
+                            classname="absolute top-[1750px] left-[60%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
                             inlineStyles={{ left: "calc(60% - 200px)" }}
                             title="Trackio"
                             srcImg="/images/imageTrackio.png"
@@ -135,7 +135,7 @@ export default function Works() {
                         ></ItemProjectWork>
 
                         <ItemProjectWork
-                            classname="absolute top-[1650px] left-[15%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
+                            classname="absolute top-[2050px] left-[15%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
                             inlineStyles={{ left: "calc(15% - 200px)" }}
                             title="Servicios Ambientales"
                             srcImg="/images/imageServiciosAmbientales.png"
@@ -144,7 +144,7 @@ export default function Works() {
                         ></ItemProjectWork>
 
                         <ItemProjectWork
-                            classname="absolute top-[1850px] left-[80%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
+                            classname="absolute top-[2350px] left-[80%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
                             inlineStyles={{ left: "calc(80% - 200px)" }}
                             title="Hire System"
                             srcImg="/images/imageHireSystem.png"
@@ -153,7 +153,7 @@ export default function Works() {
                         ></ItemProjectWork>
                         
                         <ItemProjectWork
-                            classname="absolute top-[2150px] left-[45%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
+                            classname="absolute top-[2650px] left-[45%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
                             inlineStyles={{ left: "calc(45% - 200px)" }}
                             title="PDF Extractor"
                             srcImg="/images/imagePDFExtractor.png"
@@ -161,13 +161,67 @@ export default function Works() {
                             href="/works/pdfextractor"
                         ></ItemProjectWork>
 
-                        <ItemProjectWork
-                            classname="absolute top-[2150px] left-[45%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
+                        {/* <ItemProjectWork
+                            classname="absolute top-[2600px] left-[45%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
                             inlineStyles={{ left: "calc(45% - 200px)" }}
                             title="Nutri Scanner"
                             srcImg="/images/imageNutriScanner.png"
                             year={2025}
                             href="/works/nutriscanner"
+                        ></ItemProjectWork> */}
+
+                        <ItemProjectWork
+                            classname="absolute top-[3050px] left-[20%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
+                            inlineStyles={{ left: "calc(20% - 200px)" }}
+                            title="Distribuidora B2B"
+                            srcImg="/images/imageDistribuidoraB2B.png"
+                            year={2024}
+                            href="/works/distribuidorab2b"
+                        ></ItemProjectWork>
+
+                        <ItemProjectWork
+                            classname="absolute top-[3050px] left-[80%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
+                            inlineStyles={{ left: "calc(80% - 200px)" }}
+                            title="Parks Dashboard"
+                            srcImg="/images/imageParksDashboard.png"
+                            year={2024}
+                            href="/works/parksdashboard"
+                        ></ItemProjectWork>
+
+                        <ItemProjectWork
+                            classname="absolute top-[3450px] left-[50%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
+                            inlineStyles={{ left: "calc(50% - 200px)" }}
+                            title="Doctor Dashboard"
+                            srcImg="/images/imageDoctorDashboard.png"
+                            year={2024}
+                            href="/works/doctordashboard"
+                        ></ItemProjectWork>
+
+                        <ItemProjectWork
+                            classname="absolute top-[3850px] left-[15%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
+                            inlineStyles={{ left: "calc(15% - 200px)" }}
+                            title="Books Flights"
+                            srcImg="/images/imageBooksFlights.png"
+                            year={2024}
+                            href="/works/booksflights"
+                        ></ItemProjectWork>
+
+                        <ItemProjectWork
+                            classname="absolute top-[3850px] left-[75%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
+                            inlineStyles={{ left: "calc(75% - 200px)" }}
+                            title="Logistic App"
+                            srcImg="/images/imageLogisticApp.png"
+                            year={2024}
+                            href="/works/logisticapp"
+                        ></ItemProjectWork>
+
+                        <ItemProjectWork
+                            classname="absolute top-[4250px] left-[60%] w-[500px] border border-[#262626] rounded-[0.3rem] max-1500:w-[400px] max-1200:static max-1200:w-full"
+                            inlineStyles={{ left: "calc(60% - 200px)" }}
+                            title="Segasa"
+                            srcImg="/images/imageSegasa.png"
+                            year={2024}
+                            href="/works/segasa"
                         ></ItemProjectWork>
 
 

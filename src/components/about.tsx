@@ -16,14 +16,14 @@ import { IoCloseOutline } from "react-icons/io5";
 import { IoIosSquareOutline } from "react-icons/io";
 import { GoHorizontalRule } from "react-icons/go";
 import { MdOpenInNew } from "react-icons/md";
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3 } from "react-icons/fa";
-import { FaJsSquare } from "react-icons/fa";
 import { BiLogoTypescript } from "react-icons/bi";
 import { FaNode } from "react-icons/fa";
 import { SiGreensock } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
+import { SiPrisma } from "react-icons/si";
+import { SiOpenai } from "react-icons/si";
+import { SiPuppeteer } from "react-icons/si";
 import { useTextAnimation, useTextAnimationDraglabble } from "@/hooks/useTextAnimation";
 
 export default function About() {
@@ -64,7 +64,7 @@ export default function About() {
 
                     </div>
                     <div className="flex items-center justify-center p-4">
-                    <p>Soy un <span className="text-[#ea3c06]">desarrollador web</span> enfocado en crear interfaces intuitivas y funcionales. Actualmente estudio <span className="text-[#ea3c06]">Análisis de Sistemas</span> en la <span className="text-[#ea3c06]">UTN</span> y tengo experiencia trabajando con tecnologías como HTML, CSS, JavaScript, React, Node y <span className="text-[#ea3c06]">Next.js</span>. Mi objetivo es construir sitios web que sean eficientes y resuelvan necesidades concretas, siempre priorizando la <span className="text-[#ea3c06]">experiencia del usuario</span>.</p>
+                    <p>Soy un <span className="text-[#ea3c06]">desarrollador web</span> con más de 1 año de experiencia enfocado en crear interfaces intuitivas y funcionales. Actualmente estudio <span className="text-[#ea3c06]">Programación</span> en la <span className="text-[#ea3c06]">UTN</span> y trabajo con tecnologías modernas como React, Next.js, Node.js, TypeScript y herramientas de IA como LangChain. Mi objetivo es construir sitios web que sean eficientes y resuelvan necesidades concretas, siempre priorizando la <span className="text-[#ea3c06]">experiencia del usuario</span>.</p>
                     </div>
                 </div>
                 <div ref={boxRef} className="absolute top-0 left-[60%] w-min border border-[#262626] rounded-[0.3rem] max-1100:left-[70%] max-1000:top-[5%] max-1000:left-[65%]">
@@ -89,7 +89,7 @@ export default function About() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href={"www.linkedin.com/in/joel-cordero-8998232a2"} className="group flex items-center gap-3">
+                                <Link href={"https://www.linkedin.com/in/joel-cordero-tech/"} className="group flex items-center gap-3">
                                     <p className="font-[100] group-hover:text-[#ea3c06] group-hover:font-[200] transition-[fill] ease-in-out duration-300">02</p>
                                     <p>Linkedin</p>
                                     <MdOpenInNew className="fill-[#777] group-hover:fill-[#ea3c06] transition-all ease-in-out duration-300"></MdOpenInNew>
@@ -143,21 +143,15 @@ export default function About() {
                     <div className="w-full flex items-center justify-center p-2">
                         <div className="w-full grid grid-cols-4 gap-4 px-3 py-2 max-1700:grid-cols-3">
                             <div className="relative group">
-                                <FaHtml5 className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem]" />
+                                <FaReact className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem]" />
                                 <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    HTML
+                                    React
                                 </span>
                             </div>
                             <div className="relative group">
-                                <FaCss3 className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem]" />
+                                <RiNextjsFill className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem]" />
                                 <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    CSS
-                                </span>
-                            </div>
-                            <div className="relative group">
-                                <FaJsSquare className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem]" />
-                                <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    JavaScript
+                                    Next.js
                                 </span>
                             </div>
                             <div className="relative group">
@@ -169,25 +163,31 @@ export default function About() {
                             <div className="relative group">
                                 <FaNode className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem]" />
                                 <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    Node
+                                    Node.js
+                                </span>
+                            </div>
+                            <div className="relative group">
+                                <SiPrisma className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem]" />
+                                <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    Prisma
+                                </span>
+                            </div>
+                            <div className="relative group">
+                                <SiOpenai className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem]" />
+                                <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    AI/LLMs
+                                </span>
+                            </div>
+                            <div className="relative group">
+                                <SiPuppeteer className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem]" />
+                                <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    Puppeteer
                                 </span>
                             </div>
                             <div className="relative group">
                                 <SiGreensock className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem]" />
                                 <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     GSAP
-                                </span>
-                            </div>
-                            <div className="relative group">
-                                <FaReact className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem]" />
-                                <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    React
-                                </span>
-                            </div>
-                            <div className="relative group">
-                                <RiNextjsFill className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem]" />
-                                <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    NextJS
                                 </span>
                             </div>
 
@@ -227,7 +227,7 @@ export default function About() {
 
                     </div>
                     <div className="flex items-center justify-center p-4">
-                        <p>Soy un <span className="text-[#ea3c06]">desarrollador web</span> enfocado en crear interfaces intuitivas y funcionales. Actualmente estudio <span className="text-[#ea3c06]">Análisis de Sistemas</span> en la <span className="text-[#ea3c06]">UTN</span> y tengo experiencia trabajando con tecnologías como HTML, CSS, JavaScript, React, Node y <span className="text-[#ea3c06]">Next.js</span>. Mi objetivo es construir sitios web que sean eficientes y resuelvan necesidades concretas, siempre priorizando la <span className="text-[#ea3c06]">experiencia del usuario</span>.</p>
+                        <p>Soy un <span className="text-[#ea3c06]">desarrollador web</span> con más de 1 año de experiencia enfocado en crear interfaces intuitivas y funcionales. Actualmente estudio <span className="text-[#ea3c06]">Programación</span> en la <span className="text-[#ea3c06]">UTN</span> y trabajo con tecnologías modernas como React, Next.js, Node.js, TypeScript y herramientas de <span className="text-[#ea3c06]">IA como LangChain</span>. Mi especialización incluye desarrollo frontend y la integración de inteligencia artificial en aplicaciones web. Mi objetivo es construir sitios web que sean eficientes y resuelvan necesidades concretas, siempre priorizando la <span className="text-[#ea3c06]">experiencia del usuario</span>.</p>
                     </div>
                 </div>
                 <div className=" w-min border border-[#262626] rounded-[0.3rem] max-600:w-full">
@@ -289,21 +289,15 @@ export default function About() {
                     <div className="w-full flex items-center justify-center p-2">
                         <div className="w-full grid items-center justify-center grid-cols-4 gap-4 px-3 py-2 max-1700:grid-cols-3">
                             <div className="relative group flex items-center justify-center">
-                                <FaHtml5 className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem] max-600:text-[3.8rem]" />
+                                <FaReact className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem] max-600:text-[3.8rem]" />
                                 <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    HTML
+                                    React
                                 </span>
                             </div>
                             <div className="relative group flex items-center justify-center">
-                                <FaCss3 className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem] max-600:text-[3.8rem]" />
+                                <RiNextjsFill className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem] max-600:text-[3.8rem]" />
                                 <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    CSS
-                                </span>
-                            </div>
-                            <div className="relative group flex items-center justify-center">
-                                <FaJsSquare className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem] max-600:text-[3.8rem]" />
-                                <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    JavaScript
+                                    Next.js
                                 </span>
                             </div>
                             <div className="relative group flex items-center justify-center">
@@ -315,25 +309,31 @@ export default function About() {
                             <div className="relative group flex items-center justify-center">
                                 <FaNode className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem] max-600:text-[3.8rem]" />
                                 <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    Node
+                                    Node.js
+                                </span>
+                            </div>
+                            <div className="relative group flex items-center justify-center">
+                                <SiPrisma className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem] max-600:text-[3.8rem]" />
+                                <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    Prisma
+                                </span>
+                            </div>
+                            <div className="relative group flex items-center justify-center">
+                                <SiOpenai className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem] max-600:text-[3.8rem]" />
+                                <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    AI/LLMs
+                                </span>
+                            </div>
+                            <div className="relative group flex items-center justify-center">
+                                <SiPuppeteer className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem] max-600:text-[3.8rem]" />
+                                <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    Puppeteer
                                 </span>
                             </div>
                             <div className="relative group flex items-center justify-center">
                                 <SiGreensock className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem] max-600:text-[3.8rem]" />
                                 <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     GSAP
-                                </span>
-                            </div>
-                            <div className="relative group flex items-center justify-center">
-                                <FaReact className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem] max-600:text-[3.8rem]" />
-                                <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    React
-                                </span>
-                            </div>
-                            <div className="relative group flex items-center justify-center">
-                                <RiNextjsFill className="fill-white text-[4rem] p-3 cursor-default hover:fill-[#ea3c06] transition-all ease-in-out duration-300 max-1200:text-[3rem] max-600:text-[3.8rem]" />
-                                <span className="absolute bottom-full left-1/2 transform -translate-x-[45%] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    NextJS
                                 </span>
                             </div>
 
