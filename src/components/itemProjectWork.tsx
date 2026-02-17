@@ -15,7 +15,7 @@ import { IoIosSquareOutline } from "react-icons/io";
 import { RxArrowTopRight } from "react-icons/rx";
 import { GoHorizontalRule } from "react-icons/go";
 
-import { useHoverEffect, useTextAnimation } from "@/hooks/useTextAnimation";
+import { useHoverEffect, useTextAnimationWorks } from "@/hooks/useTextAnimation";
 
 export default function ItemProjectWork({classname, inlineStyles, title, srcImg, year, href, tags }:{
     classname:string, 
@@ -27,7 +27,7 @@ export default function ItemProjectWork({classname, inlineStyles, title, srcImg,
     tags?: string[]
 }) {
 
-    const textRef = useTextAnimation();
+    const textRef = useTextAnimationWorks();
     const hoverText = useHoverEffect();
 
 

@@ -39,6 +39,37 @@ const useTextAnimation = (delay: number = 0.2) => {
   };
 };
 
+// Versión específica para las cards de /works:
+// misma animación pero SIN ScrollTrigger para evitar que
+// los últimos proyectos queden ocultos si no llegan a disparar el trigger.
+const useTextAnimationWorks = (delay: number = 0.2) => {
+  const textRefs = useRef<HTMLHeadingElement[]>([]);
+
+  useEffect(() => {
+    textRefs.current.forEach((el, index) => {
+      if (!el) return;
+
+      gsap.fromTo(
+        el,
+        { opacity: 0, y: 100 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          delay: delay + index * 0.1,
+        }
+      );
+    });
+  }, [delay]);
+
+  return (el: HTMLHeadingElement | null) => {
+    if (el && !textRefs.current.includes(el)) {
+      textRefs.current = [...textRefs.current, el];
+    }
+  };
+};
+
 
 const useTextAnimationInicio = (delay: number = 0.2) => {
     const textRefs = useRef<HTMLHeadingElement[]>([]);
@@ -228,6 +259,4 @@ const useHoverEffect = () => {
   
     return textRefs;
   };
-  
-
-export { useTextAnimation, useTextAnimationFooter, useTextAnimationProjects, useTextAnimationInicio, useTextAnimationDraglabble, useHoverEffect };
+export { useTextAnimation, useTextAnimationWorks, useTextAnimationFooter, useTextAnimationProjects, useTextAnimationInicio, useTextAnimationDraglabble, useHoverEffect };
